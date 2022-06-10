@@ -9,7 +9,9 @@ $ mkdir -p /docker-data/telegraf/etc
 
 ############ Configuramos telegraf.conf ##########3
 
-nano /docker-data/telegraf/etc/telegraf.conf
+```
+$ nano /docker-data/telegraf/etc/telegraf.conf
+```
 
 ------------ Archivo telegraf.conf ------------
 
