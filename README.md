@@ -32,7 +32,6 @@ $ nano /docker-data/telegraf/etc/telegraf.conf
     logfile = ""
     omit_hostname = false
     ```
-
 ##############OUTPUTS##############
 
 
