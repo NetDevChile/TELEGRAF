@@ -43,8 +43,8 @@ $ nano /docker-data/telegraf/etc/telegraf.conf
 timeout = "0s"
     username = "telegraf_w"
     password = "password"
-    retention_policy = ""
-    ```
+    retention_policy = ""    
+```
     
 ###############################################################################
 #                                  INPUTS                                     #
