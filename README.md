@@ -31,9 +31,9 @@ $ nano /docker-data/telegraf/etc/telegraf.conf
     quiet = false
     logfile = ""
     omit_hostname = false
-    ```
-##############OUTPUTS##############
+```
 
+##############OUTPUTS##############
 
 ```
 [[outputs.influxdb]]
@@ -45,9 +45,7 @@ timeout = "0s"
     retention_policy = ""    
 ```
     
-
 ##############INPUTS##############
-
 
 ```
 [[inputs.cpu]]
