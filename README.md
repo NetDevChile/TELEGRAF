@@ -15,6 +15,7 @@ $ nano /docker-data/telegraf/etc/telegraf.conf
 
 ------------ Archivo telegraf.conf ------------
 
+```
 [global_tags]
 # Configuration for telegraf agent
 [agent]
@@ -30,19 +31,27 @@ $ nano /docker-data/telegraf/etc/telegraf.conf
     quiet = false
     logfile = ""
     omit_hostname = false
+    ```
+    
 ###############################################################################
 #                                  OUTPUTS                                    #
 ###############################################################################
+
+```
 [[outputs.influxdb]]
     urls = ["http://influx1:8086"]
     database = "telegraf"
 timeout = "0s"
     username = "telegraf_w"
-    password = "2be1pir8"
+    password = "password"
     retention_policy = ""
+    ```
+    
 ###############################################################################
 #                                  INPUTS                                     #
 ###############################################################################
+
+```
 [[inputs.cpu]]
     percpu = true
     totalcpu = true
@@ -58,13 +67,17 @@ timeout = "0s"
 [[inputs.netstat]]
 [[inputs.processes]]
 [[inputs.kernel]]
+```
 
 ######################## creamos docker-compose#############
 
+```
 nano /docker-data/telegraf/docker-compose.yml
+```
 
 ---------------------- Archivo docker-compose.yml ------------
 
+```
 version: '3.3'
 services:
  telegraf:
@@ -86,9 +99,11 @@ networks:
  i40sys:
    external:
      name: i40sys
+```
 
 ############### Iniciar Compose################
 
+```
 cd /docker-data/telegraf
 docker-compose up -d
-
+```
